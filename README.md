@@ -1,2 +1,2 @@
 # Plotly.js-Custom-Legend
-My attempt at designing a custom legend for Plotly.js
+An HTML/Vanilla JS implementation of a custom legend for Plotly.js charts
