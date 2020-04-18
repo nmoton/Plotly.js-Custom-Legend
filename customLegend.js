@@ -1,56 +1,50 @@
-<<<<<<< HEAD
 var trace1 = {
   name: 'Trend 1',
   x: [0, 1, 2, 3, 4, 5, 6, 7, 8],
   y: [0, 3, 6, 4, 5, 2, 3, 5, 4],
-  type: 'scatter',
-  color: 'red',
-  visible: false,
+  mode: 'lines+markers',
+  line: {
+    color: 'rgb(200, 0, 0)'
+  },
+  visible: true,
 };
 var trace2 = {
   name: 'Trend 2',
   x: [0, 1, 2, 3, 4, 5, 6, 7, 8],
   y: [0, 4, 7, 8, 3, 6, 3, 3, 4],
-  type: 'scatter',
-  color: 'green',
+  mode: 'lines+markers',
+  line: {
+    color: 'rgb(0, 128, 0)'
+  },
   visible: false,
 };
   var trace3 = {
   name: 'Trend 3',
   x: [0, 1, 2, 3, 4, 5, 6, 7, 8],
   y: [0, 2, 4, 6, 8, 10, 8, 6, 4],
-  type: 'scatter',
-  color: 'blue',
+  mode: 'lines+markers',
+  line: {
+    color: 'rgb(0, 0, 128)'
+  },
   visible: false,
-=======
-// Traces that will be plotted
-var trace1 = {
-  x: [0, 1, 2, 3, 4, 5, 6, 7, 8],
-  y: [0, 3, 6, 4, 5, 2, 3, 5, 4],
-  type: 'scatter'
-};
-var trace2 = {
-  x: [0, 1, 2, 3, 4, 5, 6, 7, 8],
-  y: [0, 4, 7, 8, 3, 6, 3, 3, 4],
-  type: 'scatter'
-};
-  var trace3 = {
-  x: [0, 1, 2, 3, 4, 5, 6, 7, 8],
-  y: [0, 2, 4, 6, 8, 10, 8, 6, 4],
->>>>>>> e75e4cad97cb98796883a72416d52976041dfb21
 }
 
 var data = [trace1, trace2, trace3];
 
-<<<<<<< HEAD
-var layout = {showlegend: false};
+var layout = {showlegend: false,
+             xaxis: {
+               range: [0, 10]
+             },
+             yaxis: {
+               range: [0, 12]
+             }};
 
 Plotly.newPlot('myDiv', data, layout);
 
 // Add the trace names to the legend
-document.getElementById("trace1-label").textContent=trace1.name;
-document.getElementById("trace2-label").textContent=trace2.name;
-document.getElementById("trace3-label").textContent=trace3.name;
+document.getElementById("trace1-label").textContent=trace1.name + ' (Red)';
+document.getElementById("trace2-label").textContent=trace2.name + ' (Green)';
+document.getElementById("trace3-label").textContent=trace3.name + ' (Blue)';
 
 // If a box is unchecked, don't show the trace
 document.getElementById("trace1-check").addEventListener('change', (event) => {
@@ -79,9 +73,3 @@ document.getElementById("trace3-check").addEventListener('change', (event) => {
   }
   Plotly.redraw(myDiv);
 })
-=======
-// Hide the original legend and plot styling
-var layout = {showlegend: false};
-
-Plotly.newPlot('myDiv', data, layout);
->>>>>>> e75e4cad97cb98796883a72416d52976041dfb21
